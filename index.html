@@ -276,22 +276,95 @@
     <section id="download">
       <h2>Reclaim Your Focus Today</h2>
       <p>Download the free lightweight desktop companion app. Build better attention habits and accomplish more in every study session.</p>
-      
-      <a href="assets/download/AI-Companion-Setup.msi" class="btn-download" download>
-        <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
-        </svg>
-        Download for Windows x64
-      </a>
-      
-      <p class="platform-note">Requires Windows 10/11 (64-bit) · v0.1.0 · 3.1 MB</p>
+
+      <div class="download-grid">
+
+        <!-- Windows -->
+        <div class="download-card">
+          <div class="download-card-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M0 3.449L9.75 2.1v9.451H0m10.949-9.602L24 0v11.551H10.949M0 12.6h9.75v9.451L0 20.699M10.949 12.749H24V24l-12.9-1.801"/>
+            </svg>
+          </div>
+          <div class="download-card-info">
+            <span class="download-os">Windows</span>
+            <span class="download-desc">Windows 10/11 · 64-bit</span>
+          </div>
+          <a href="https://github.com/sarthakagrawal-Shriek/AI-Companion/releases/download/v0.1.1/AI-Companion-0.1.1-Setup.exe" class="btn-download" download>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+            Download .exe
+          </a>
+        </div>
+
+        <!-- Mac Apple Silicon -->
+        <div class="download-card">
+          <div class="download-card-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
+            </svg>
+          </div>
+          <div class="download-card-info">
+            <span class="download-os">macOS</span>
+            <span class="download-desc">Apple Silicon (M1/M2/M3)</span>
+          </div>
+          <a href="https://github.com/sarthakagrawal-Shriek/AI-Companion/releases/download/v0.1.1/AI.Companion_0.1.1_aarch64.dmg" class="btn-download btn-mac" download>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+            Download .dmg
+          </a>
+        </div>
+
+        <!-- Mac Intel -->
+        <div class="download-card">
+          <div class="download-card-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09zM15.53 3.83c.843-1.012 1.4-2.427 1.245-3.83-1.207.052-2.662.805-3.532 1.818-.78.896-1.454 2.338-1.273 3.714 1.338.104 2.715-.688 3.559-1.701"/>
+            </svg>
+          </div>
+          <div class="download-card-info">
+            <span class="download-os">macOS</span>
+            <span class="download-desc">Intel x64</span>
+          </div>
+          <a href="https://github.com/sarthakagrawal-Shriek/AI-Companion/releases/download/v0.1.1/AI.Companion_0.1.1_x64.dmg" class="btn-download btn-mac" download>
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 9h-4V3H9v6H5l7 7 7-7zM5 18v2h14v-2H5z"/>
+            </svg>
+            Download .dmg
+          </a>
+        </div>
+
+        <!-- Linux -->
+        <div class="download-card download-card-disabled">
+          <div class="download-card-icon">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+              <path d="M12.504 0c-.155 0-.315.008-.48.021-4.226.333-3.105 4.807-3.17 6.298-.076 1.092-.3 1.953-1.05 3.02-.885 1.051-2.127 2.75-2.716 4.521-.278.832-.41 1.684-.287 2.489a.424.424 0 00-.11.135c-.26.268-.45.6-.663.839-.199.199-.485.267-.797.4-.313.136-.658.269-.864.544-.197.265-.264.626-.198.932.065.31.264.57.518.74.69.444 1.861.505 3.05.241.39-.083.752-.18.993-.321l.171-.101c.063.04.132.072.202.1.413.159.924.16 1.354.002l.073-.024c.168.082.346.168.527.24 1.19.432 2.498.228 3.07-.486a.424.424 0 00.11-.267c.02-.172-.056-.347-.2-.455-.216-.168-.524-.19-.757-.19-.254-.004-.502-.01-.73-.004zm-5.033 1.44c.375-.007.756.078 1.112.221l.075.031c-.01.186.024.38.117.55.177.33.532.541.925.634.4.098.81.073 1.175-.025a3.26 3.26 0 00.592-.22c.034.176.023.363-.03.543-.17.564-.636.95-1.08 1.24a3.98 3.98 0 01-1.25.506 3.41 3.41 0 01-1.27.064c-.42-.065-.81-.22-1.12-.44a2.87 2.87 0 01-.71-.74 2.72 2.72 0 01-.32-1.32c.04-.5.22-.97.52-1.36.29-.38.69-.66 1.14-.81.05-.016.1-.028.15-.038a2.28 2.28 0 01.003-.016zm10.67 6.086c.17-.008.34.002.5.032a2.4 2.4 0 011.23.61c.32.3.52.7.57 1.12.07.54-.06 1.09-.36 1.54-.31.45-.77.78-1.28.93-.21.06-.43.09-.64.08a2.2 2.2 0 01-.59-.1 2.12 2.12 0 01-.94-.65 2.27 2.27 0 01-.44-1.09 2.45 2.45 0 01.18-1.27c.22-.5.62-.9 1.11-1.11.21-.08.44-.12.66-.09z"/>
+            </svg>
+          </div>
+          <div class="download-card-info">
+            <span class="download-os">Linux</span>
+            <span class="download-desc">Coming Soon</span>
+          </div>
+          <span class="btn-download btn-disabled">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+            </svg>
+            Coming Soon
+          </span>
+        </div>
+
+      </div>
+
+      <p class="platform-note">v0.1.1 · Free · Local & Private · No Account Required</p>
     </section>
 
   </main>
 
   <!-- SECTION 8: FOOTER -->
   <footer>
-    <p>AI Companion v0.1.0 · A Desktop Productivity Tool</p>
+    <p>AI Companion v0.1.1 · A Desktop Productivity Tool</p>
     <p>© 2026 AI Companion Project. Built to respect local privacy.</p>
   </footer>
 

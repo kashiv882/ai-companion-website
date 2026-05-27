@@ -470,7 +470,134 @@ section h2 {
 .platform-note {
   font-size: 0.85rem;
   color: var(--muted);
-  margin-top: 1rem !important;
+  margin-top: 1.5rem !important;
+}
+
+/* Multi-platform Download Grid */
+.download-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+  margin-top: 3rem;
+  text-align: left;
+}
+
+.download-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: var(--radius-card);
+  padding: 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1.25rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.download-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent), var(--cyan), transparent);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.download-card:hover {
+  border-color: var(--card-hover-border);
+  background: rgba(255,255,255,0.05);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2), 0 0 20px rgba(108,99,255,0.05);
+  transform: translateY(-4px);
+}
+
+.download-card:hover::before {
+  opacity: 1;
+}
+
+.download-card-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.download-card-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: rgba(108,99,255,0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--accent);
+}
+
+.download-card-icon svg {
+  width: 26px;
+  height: 26px;
+}
+
+.download-card-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  flex: 1;
+}
+
+.download-os {
+  font-family: 'Space Grotesk', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #fff;
+}
+
+.download-desc {
+  font-size: 0.82rem;
+  color: var(--muted);
+}
+
+.btn-mac {
+  background: linear-gradient(135deg, #555, #888) !important;
+}
+
+.btn-mac:hover {
+  background: linear-gradient(135deg, #666, #999) !important;
+}
+
+.btn-disabled {
+  background: rgba(255,255,255,0.06) !important;
+  color: var(--muted) !important;
+  box-shadow: none !important;
+  cursor: not-allowed !important;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-btn);
+  font-size: 0.95rem;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  border: 1px solid var(--card-border);
+}
+
+.btn-disabled svg {
+  width: 18px;
+  height: 18px;
+  fill: currentColor;
+}
+
+@media (max-width: 1024px) {
+  .download-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .download-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* Footer Section */
