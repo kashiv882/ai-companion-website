@@ -563,5 +563,19 @@
 
   </div>
 
+  <script>
+    window.addEventListener('scroll', () => {
+      const backBtn = document.querySelector('.nav-back');
+      if (backBtn) {
+        if (window.scrollY > 80) {
+          backBtn.style.opacity = '0';
+          backBtn.style.pointerEvents = 'none';
+        } else {
+          backBtn.style.opacity = '1';
+          backBtn.style.pointerEvents = 'auto';
+        }
+      }
+    });
+  </script>
 </body>
 </html>
