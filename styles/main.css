@@ -476,7 +476,7 @@ section h2 {
 /* Multi-platform Download Grid */
 .download-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 1.5rem;
   margin-top: 3rem;
   text-align: left;
@@ -567,6 +567,20 @@ section h2 {
   background: linear-gradient(135deg, #666, #999) !important;
 }
 
+.btn-linux {
+  background: linear-gradient(135deg, #2d6a2d, #3a8a3a) !important;
+}
+
+.btn-linux:hover {
+  background: linear-gradient(135deg, #368036, #45a045) !important;
+  box-shadow: 0 8px 30px rgba(58, 138, 58, 0.4) !important;
+}
+
+.download-card-icon-linux {
+  background: rgba(58, 138, 58, 0.12) !important;
+  color: #4caf50 !important;
+}
+
 .btn-disabled {
   background: rgba(255,255,255,0.06) !important;
   color: var(--muted) !important;
@@ -599,6 +613,7 @@ section h2 {
     grid-template-columns: 1fr;
   }
 }
+
 
 /* Footer Section */
 footer {
