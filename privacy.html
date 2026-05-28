@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Privacy Policy — AI Companion</title>
+  <meta name="description" content="Privacy policy for the AI Companion browser extension and its connection to the AI Companion desktop app.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #050508;
+      --bg-gradient: radial-gradient(circle at 50% 0%, #161233 0%, #050508 70%);
+      --accent: #6c63ff;
+      --cyan: #00d4ff;
+      --text: #f0f0f5;
+      --muted: #8e8ea8;
+      --card-bg: rgba(255, 255, 255, 0.03);
+      --card-border: rgba(255, 255, 255, 0.06);
+      --card-hover-border: rgba(108, 99, 255, 0.3);
+      --radius-card: 16px;
+      --glow: rgba(108, 99, 255, 0.15);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg);
+      background-image: var(--bg-gradient);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+      min-height: 100vh;
+    }
+
+    h1, h2, h3, h4 {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar { width: 8px; }
+    ::-webkit-scrollbar-track { background: var(--bg); }
+    ::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 4px; }
+    ::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+    /* Top Navigation */
+    .top-nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(5, 5, 8, 0.85);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--card-border);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      text-decoration: none;
+    }
+
+    .nav-brand-mark {
+      width: 30px;
+      height: 30px;
+      border-radius: 8px;
+      background: linear-gradient(135deg, var(--accent), var(--cyan));
+      display: grid;
+      place-items: center;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+    }
+
+    .nav-brand-name {
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 0.95rem;
+      color: var(--text);
+    }
+
+    .nav-sep {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .nav-page {
+      color: var(--muted);
+      font-size: 0.85rem;
+    }
+
+    .nav-back {
+      margin-left: auto;
+      color: var(--accent);
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s ease;
+    }
+
+    .nav-back:hover {
+      color: var(--cyan);
+    }
+
+    /* Page Wrapper */
+    .wrap {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 4rem 2rem 6rem;
+    }
+
+    /* Page Header */
+    .page-header {
+      margin-bottom: 2.5rem;
+    }
+
+    .page-header h1 {
+      font-size: clamp(2rem, 5vw, 2.75rem);
+      line-height: 1.1;
+      background: linear-gradient(135deg, #ffffff 0%, #a5a5ff 50%, #00d4ff 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-meta {
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    /* Summary Banner */
+    .summary {
+      margin: 2rem 0;
+      padding: 1.25rem 1.5rem;
+      border-radius: 12px;
+      background: rgba(0, 212, 255, 0.06);
+      border: 1px solid rgba(0, 212, 255, 0.18);
+      color: #a0e8f5;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .summary strong {
+      color: var(--cyan);
+    }
+
+    /* Main Card */
+    .policy-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: var(--radius-card);
+      padding: 3rem 2.5rem;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    }
+
+    /* Section Headings */
+    h2 {
+      font-size: 1.15rem;
+      color: #ffffff;
+      margin: 2.5rem 0 0.75rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    h2:first-child {
+      margin-top: 0;
+    }
+
+    p {
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+      font-size: 0.95rem;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* Lists */
+    ul {
+      padding-left: 1.25rem;
+      margin-bottom: 0.85rem;
+    }
+
+    li {
+      color: var(--muted);
+      font-size: 0.95rem;
+      margin-bottom: 0.4rem;
+    }
+
+    li strong {
+      color: #c8c8e8;
+    }
+
+    /* Table */
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 1rem 0 0.5rem;
+      font-size: 0.88rem;
+    }
+
+    th, td {
+      border: 1px solid var(--card-border);
+      padding: 0.75rem 1rem;
+      text-align: left;
+      vertical-align: top;
+    }
+
+    th {
+      background: rgba(108, 99, 255, 0.08);
+      color: #c8c8e8;
+      font-family: 'Space Grotesk', sans-serif;
+      font-weight: 600;
+      font-size: 0.85rem;
+    }
+
+    td {
+      color: var(--muted);
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    /* Links */
+    a {
+      color: var(--accent);
+      text-decoration: none;
+      transition: color 0.2s ease;
+    }
+
+    a:hover {
+      color: var(--cyan);
+    }
+
+    /* Inline code */
+    code {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      font-size: 0.85em;
+      background: rgba(108, 99, 255, 0.12);
+      color: #b0a8ff;
+      padding: 0.1em 0.4em;
+      border-radius: 4px;
+      border: 1px solid rgba(108, 99, 255, 0.2);
+    }
+
+    /* Page Footer */
+    .page-footer {
+      margin-top: 3rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--card-border);
+      font-size: 0.85rem;
+      color: var(--muted);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
+
+    .page-footer a {
+      color: var(--accent);
+    }
+
+    .back-home-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(108, 99, 255, 0.1);
+      border: 1px solid rgba(108, 99, 255, 0.2);
+      color: var(--accent);
+      padding: 0.5rem 1.1rem;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      font-weight: 500;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .back-home-btn:hover {
+      background: rgba(108, 99, 255, 0.2);
+      border-color: var(--accent);
+      color: #fff;
+    }
+
+    /* Responsive */
+    @media (max-width: 640px) {
+      .policy-card {
+        padding: 2rem 1.25rem;
+      }
+      .wrap {
+        padding: 2.5rem 1rem 4rem;
+      }
+      .top-nav {
+        padding: 0.75rem 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation Bar -->
+  <nav class="top-nav">
+    <a href="index.html" class="nav-brand">
+      <div class="nav-brand-mark">A</div>
+      <span class="nav-brand-name">AI Companion</span>
+    </a>
+    <span class="nav-sep">/</span>
+    <span class="nav-page">Privacy Policy</span>
+    <a href="index.html" class="nav-back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+      Back to Home
+    </a>
+  </nav>
+
+  <div class="wrap">
+
+    <!-- Page Header -->
+    <header class="page-header">
+      <h1>Privacy Policy</h1>
+      <p class="page-meta">Browser extension &amp; desktop companion · Effective May 28, 2026</p>
+    </header>
+
+    <!-- Summary Banner -->
+    <div class="summary">
+      <strong>In short:</strong> The AI Companion browser extension sends browsing context
+      (hostname, page title, and a short page excerpt) only to the AI Companion desktop app on
+      your computer at <code>127.0.0.1:17529</code>. The extension does not send data to the
+      internet. Your cloud account stores session summaries and per-app/per-site duration
+      aggregates — not full URLs, not window titles, and not page excerpts.
+    </div>
+
+    <!-- Policy Content Card -->
+    <main class="policy-card">
+
+      <h2>1. Who we are</h2>
+      <p>
+        This policy covers the <strong>AI Companion — Activity Helper</strong> browser
+        extension (the "Extension") and how it works with the separate
+        <strong>AI Companion desktop application</strong> (the "Desktop App").
+      </p>
+      <p>
+        Product website:
+        <a href="https://ai-companion-website-henna.vercel.app/">https://ai-companion-website-henna.vercel.app/</a>
+      </p>
+      <p>
+        Source code:
+        <a href="https://github.com/sarthakagrawal-Shriek/AI-Companion">https://github.com/sarthakagrawal-Shriek/AI-Companion</a>
+      </p>
+      <p>
+        Privacy contact:
+        <a href="https://github.com/sarthakagrawal-Shriek/AI-Companion/issues">GitHub Issues</a>
+      </p>
+
+      <h2>2. Scope</h2>
+      <p>
+        The Extension is a companion to the Desktop App. It does not work as a standalone
+        product. Most features — account sign-in, session history, AI evaluation, and cloud sync
+        — are handled by the Desktop App and its backend, not by the Extension directly.
+      </p>
+      <p>This policy describes:</p>
+      <ul>
+        <li>What the Extension collects and where it sends that data</li>
+        <li>What the Desktop App may do with information received from the Extension</li>
+        <li>What is stored in your AI Companion cloud account</li>
+      </ul>
+
+      <h2>3. What the Extension collects</h2>
+      <p>When you browse with the Extension installed and the Desktop App running, the Extension may process:</p>
+      <ul>
+        <li><strong>Active tab hostname</strong> — e.g. <code>react.dev</code> (paths and query strings are stripped before sending)</li>
+        <li><strong>Page title</strong> — the title of the active browser tab</li>
+        <li><strong>Short page excerpt</strong> — up to about 240 characters, typically from headings and the first paragraph on the page. The excerpt is intended solely to help distinguish productive and non-productive browsing context during focus sessions.</li>
+        <li><strong>Browser name</strong> — e.g. Chrome, Edge, Brave</li>
+        <li><strong>YouTube playback state</strong> — on YouTube watch pages only, whether media appears to be active (used for idle detection during focus sessions). This signal is limited to whether media appears active and is not used to collect watch history or video content details.</li>
+        <li><strong>Extension connection status</strong> — whether the Desktop App responded on localhost</li>
+      </ul>
+      <p>The Extension reads page content only on ordinary <code>http://</code> and <code>https://</code> pages via a content script. It does not run on the local bridge page at <code>127.0.0.1:17529</code>.</p>
+
+      <h2>4. What the Extension does not collect</h2>
+      <p>The Extension does not collect or transmit:</p>
+      <ul>
+        <li>Passwords</li>
+        <li>Form inputs</li>
+        <li>Payment information</li>
+        <li>Email contents</li>
+        <li>Keystrokes</li>
+        <li>Cookies</li>
+        <li>Browser history databases</li>
+        <li>Full URLs with paths or query parameters</li>
+        <li>Screenshots</li>
+        <li>Audio or video recordings</li>
+      </ul>
+
+      <h2>5. Where Extension data goes</h2>
+      <p><strong>The Extension sends data only to your own machine.</strong> It communicates exclusively with the Desktop App at:</p>
+      <p><code>http://127.0.0.1:17529</code></p>
+      <p>
+        The Extension does not remotely execute code, inject advertisements, sell browsing activity,
+        or share browsing information with third parties for marketing purposes.
+      </p>
+      <p>The Extension does <strong>not</strong>:</p>
+      <ul>
+        <li>Send browsing data to AI Companion servers</li>
+        <li>Send browsing data to analytics providers</li>
+        <li>Send browsing data to advertising networks</li>
+        <li>Upload full URLs (only hostnames are transmitted)</li>
+      </ul>
+
+      <h2>6. What the Desktop App does with Extension data</h2>
+      <p>After receiving data from the Extension, the Desktop App may:</p>
+      <ul>
+        <li>Show site-level activity during an active focus session on your device</li>
+        <li>Use page title and excerpt <strong>in memory only</strong> to evaluate whether browsing aligned with your session goal</li>
+        <li>Send title and excerpt to <strong>Google Gemini</strong> once at session end for that alignment evaluation, if you complete a session with AI evaluation enabled</li>
+        <li>Store only aggregated activity in your cloud account, such as app name, bare hostname, category, time spent, visit counts, and alignment verdict — not titles, not excerpts, and not full URLs</li>
+      </ul>
+      <p>Window titles from non-browser apps stay on your device and are not stored in the cloud database.</p>
+
+      <h2>7. What we store in the cloud</h2>
+      <p>If you use AI Companion with an account, your backend account may store:</p>
+      <ul>
+        <li>Focus session metadata (intent, duration, timestamps, summaries)</li>
+        <li>Per-app / per-host activity aggregates (e.g. "Chrome · leetcode.com · 18 minutes")</li>
+        <li>Alignment labels and short reasons produced after a session</li>
+        <li>Account settings you choose in Settings → Privacy</li>
+      </ul>
+      <p><strong>AI Companion does not sell personal data or browsing activity data.</strong></p>
+      <p>We do <strong>not</strong> store in the cloud:</p>
+      <ul>
+        <li>Full URLs or page paths</li>
+        <li>Raw browser window titles</li>
+        <li>Page text excerpts from the Extension</li>
+      </ul>
+      <p>You can delete your stored session and activity data at any time from <strong>Settings → Privacy → Delete all my data</strong> in the Desktop App.</p>
+
+      <h2>8. Extension permissions</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Permission</th>
+            <th>Why it is used</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><code>tabs</code>, <code>activeTab</code></td>
+            <td>Detect the active tab and its hostname when you switch tabs</td>
+          </tr>
+          <tr>
+            <td><code>scripting</code></td>
+            <td>Support content-script behavior on web pages when needed</td>
+          </tr>
+          <tr>
+            <td><code>storage</code></td>
+            <td>Keep small local Extension state on your device</td>
+          </tr>
+          <tr>
+            <td><code>notifications</code></td>
+            <td>Optionally alert you during a focus session when you appear off-task</td>
+          </tr>
+          <tr>
+            <td><code>alarms</code></td>
+            <td>Run timed checks related to session drift detection</td>
+          </tr>
+          <tr>
+            <td><code>http://127.0.0.1:17529/*</code></td>
+            <td>Talk to the AI Companion Desktop App on localhost</td>
+          </tr>
+          <tr>
+            <td><code>&lt;all_urls&gt;</code> / content scripts on web pages</td>
+            <td>The Extension requires access to web pages in order to determine the currently active browsing context during focus sessions. Only the hostname, page title, and a short excerpt are processed.</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h2>9. Third-party services</h2>
+      <ul>
+        <li><strong>AI Companion backend</strong> — account, sessions, and aggregated activity sync (only from the Desktop App, not from the Extension directly)</li>
+        <li><strong>Clerk</strong> — authentication for the Desktop App</li>
+        <li><strong>Google Gemini</strong> — optional post-session alignment analysis using title/excerpt data supplied by the Desktop App</li>
+      </ul>
+      <p>The Extension itself does not embed third-party trackers or remote analytics SDKs.</p>
+      <p>
+        The Extension does not remotely execute code, inject advertisements, sell browsing activity,
+        or share browsing information with third parties for marketing purposes.
+      </p>
+
+      <h2>10. Legal bases and your choices</h2>
+      <p>You choose to install the Extension and Desktop App. You can stop data collection from the Extension at any time by:</p>
+      <ul>
+        <li>Disabling or removing the Extension from your browser</li>
+        <li>Closing the Desktop App (the Extension cannot reach the local bridge without it)</li>
+        <li>Adjusting privacy toggles in the Desktop App where available</li>
+      </ul>
+
+      <h2>11. Data retention</h2>
+      <ul>
+        <li><strong>Extension:</strong> does not maintain a browsing history database; it forwards current-tab context to localhost</li>
+        <li><strong>Desktop App:</strong> keeps titles/excerpts in process memory during a session, then drops them after alignment evaluation</li>
+        <li><strong>Cloud account:</strong> retains session and aggregate activity data until you delete it or delete your account</li>
+      </ul>
+
+      <h2>12. Security</h2>
+      <p>
+        Local communication is limited to <code>127.0.0.1</code>. The Desktop App accepts requests only from
+        approved browser extension origins and may additionally validate a locally configured authentication
+        token. Cloud data is transmitted over HTTPS to the AI Companion API.
+      </p>
+
+      <h2>13. Children</h2>
+      <p>AI Companion is not directed at children under 13, and we do not knowingly collect personal information from children.</p>
+
+      <h2>14. International users</h2>
+      <p>
+        If you use AI Companion from outside your home country, your aggregated account data may be
+        processed on servers used by our cloud providers. The Extension's browsing signals stay on
+        your device unless the Desktop App chooses to include derived results in a cloud sync.
+      </p>
+
+      <h2>15. Changes to this policy</h2>
+      <p>
+        We may update this policy when the Extension or Desktop App changes. We will revise the
+        "Effective" date at the top of this page. Continued use after an update means you accept
+        the revised policy.
+      </p>
+
+      <h2>16. Contact</h2>
+      <p>
+        Questions about this policy:
+        <a href="https://github.com/sarthakagrawal-Shriek/AI-Companion/issues">open a GitHub issue</a>
+        in the AI Companion repository.
+      </p>
+
+    </main>
+
+    <!-- Page Footer -->
+    <footer class="page-footer">
+      <span>
+        Also available as Markdown:
+        <a href="https://github.com/sarthakagrawal-Shriek/AI-Companion/blob/main/docs/browser-extension-privacy.md">docs/browser-extension-privacy.md</a>
+      </span>
+      <a href="index.html" class="back-home-btn">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z"/></svg>
+        Back to Home
+      </a>
+    </footer>
+
+  </div>
+
+</body>
+</html>
